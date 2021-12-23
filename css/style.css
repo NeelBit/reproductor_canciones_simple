@@ -1,0 +1,241 @@
+:root {
+    /* purple */
+    --colorPrimario: #9c27b0;
+    /* purple darken 3 */
+    --colorPrimarioDarken: #6a1b9a;
+    --colorBlanco: #eee6e6;
+    --colorNegro: #222;
+    /* red darken 3 */
+    --colorRed: #c62828;
+    /* green darken 3 */
+    --colorGreen: #2e7d32;
+    /* green accent 3 */
+    --colorGreenAccent: #00e676;
+    /* yellow accent 3 */
+    --colorYellowAccent: #ffea00;
+    /* grey darken 2 */
+    --colorGris: #616161;
+
+    --fuente: 'Shadows Into Light', cursive;
+    --fuenteBold: 'Titillium Web', sans-serif;
+
+    --redondeoSuave: 1rem;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colorNegro);
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: var(--colorBlanco);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+/* Globales: */
+/* contenedor */
+.contenedor,
+.contenedor-principal {
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+
+    .contenedor,
+    .contenedor-principal {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .contenedor,
+    .contenedor-principal {
+        width: min(85%, 120rem);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorPrimario);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fuenteBold);
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    margin: 0;
+}
+
+/* subrayado personalizado */
+.underlinePersonalizado {
+    border-radius: var(--redondeoSuave);
+    /* background: linear-gradient(90deg, #07effd 0%, #005fff 100%); */
+    background: linear-gradient(90deg, var(--colorPrimarioDarken) 0%, var(--colorPrimario) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4rem;
+    background-position: 0 90%;
+    transition: all 0.3s ease-in-out;
+}
+
+.underlinePersonalizado:hover {
+    background-size: 100% 90%;
+}
+
+/* Header */
+header {
+    padding: 2rem;
+}
+
+header span {
+    padding: 1rem;
+}
+
+header,
+.contenedor-footer {
+    width: 100%;
+    /* height: 10rem; */
+    color: var(--colorBlanco);
+    text-align: center;
+    background-color: var(--colorGris);
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    /* margin-top: 3rem; */
+}
+
+/* listado-canciones */
+.listado-canciones {
+    font-family: var(--fuente);
+    color: var(--colorPrimario);
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    width: 100%;
+    gap: 3rem;
+}
+
+.cancion {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: .2rem var(--colorPrimarioDarken) solid;
+    border-top: .2rem var(--colorPrimarioDarken) solid;
+    padding: .5rem;
+    transition: transform 250ms;
+}
+
+.cancion:hover {
+    box-shadow: var(--colorPrimario) 0px 0px .5rem .2rem;
+    transition: 300ms ease-in-out;
+    transform: translateY(-1rem);
+}
+
+.titulo {
+    font-size: 2.8rem;
+    flex: 3;
+}
+
+.cancion .titulo span:hover {
+    cursor: default;
+}
+
+.play,
+.stop,
+.download {
+    /* flex: 1; */
+    display: flex;
+    padding: .3rem;
+    height: 3rem;
+}
+
+.play:hover,
+.stop:hover,
+.download:hover {
+    cursor: pointer;
+    background-color: var(--colorPrimarioDarken);
+    border-radius: 50%;
+}
+
+/* volumen */
+.contenedor-volumen {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.volumen {
+    accent-color: var(--colorPrimarioDarken);
+}
+
+.n-volumen {
+    color: var(--colorPrimario);
+    text-align: center;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/* footer */
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-footer small {
+    font-size: 1.6rem;
+}
+
+.footer__texto,
+.footer__autor {
+    margin: .2rem auto;
+    display: block;
+}

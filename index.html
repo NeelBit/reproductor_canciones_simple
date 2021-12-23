@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de canciones simple</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- fuentes : Shadows Into Light regular 400 y Titillium Web 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+
+    <!-- iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Reproductor de canciones muy simple con HTML, CSS y JS -->
+
+    <header class="header">
+        <h1><span class="underlinePersonalizado">Reproductor de canciones simple</span></h1>
+    </header>
+
+    <div class="contenedor principal">
+
+        <main class="listado-canciones">
+
+            <div class="cancion">
+                <div class="titulo"><span>Matrix llamada</span></div>
+
+                <div class="play" id="matrix_llamada">
+                    <span class="material-icons" title="Reproducir">play_arrow</span>
+                </div>
+
+                <div class="stop">
+                    <span class="material-icons" title="Detener">stop</span>
+                </div>
+
+                <div class="download">
+                    <a href="media/audio/matrix_llamada.mp3" download><span class="material-icons" title="Descargar">download</span></a>
+                </div>
+            </div>
+
+            <div class="cancion">
+                <div class="titulo"><span>Homero lento</span></div>
+
+                <div class="play" id="homero_lento">
+                    <span class="material-icons" title="Reproducir">play_arrow</span>
+                </div>
+
+                <div class="stop">
+                    <span class="material-icons" title="Detener">stop</span>
+                </div>
+
+                <div class="download">
+                    <a href="media/audio/homero_lento.mp3" download><span class="material-icons" title="Descargar">download</span></a>
+                </div>
+            </div>
+
+            <div class="cancion">
+                <div class="titulo"><span>Vendedor callejero</span></div>
+
+                <div class="play" id="vendedor_callejero">
+                    <span class="material-icons" title="Reproducir">play_arrow</span>
+                </div>
+
+                <div class="stop">
+                    <span class="material-icons" title="Detener">stop</span>
+                </div>
+
+                <div class="download">
+                    <a href="media/audio/vendedor_callejero.mp3" download><span class="material-icons" title="Descargar">download</span></a>
+                </div>
+            </div>
+
+            <div class="cancion">
+                <div class="titulo"><span>Homero ñam ñam</span></div>
+
+                <div class="play" id="homero_ñamñam">
+                    <span class="material-icons" title="Reproducir">play_arrow</span>
+                </div>
+
+                <div class="stop">
+                    <span class="material-icons" title="Detener">stop</span>
+                </div>
+
+                <div class="download">
+                    <a href="media/audio/homero_ñamñam.mp3" download><span class="material-icons" title="Descargar">download</span></a>
+                </div>
+            </div>
+
+        </main>
+
+        <div class="contenedor-volumen">
+            <input type="range" min="0.0" max="1" name="volumen" id="volumen" class="volumen" step="0.1" disabled>
+            <div id="n-volumen" class="n-volumen invisible">0</div>
+        </div>
+
+
+    </div>
+
+    <footer class="contenedor-footer">
+        <small class="footer__texto">Todos los derechos reservados 2021</small>
+        <small class="footer__autor">By Neel</small>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
